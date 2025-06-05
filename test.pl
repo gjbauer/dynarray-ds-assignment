@@ -6,7 +6,7 @@ use POSIX ":sys_wait_h";
 use Time::HiRes qw(time);
 use Test::Simple tests => 2;
 
-my @BINS = qw(all);
+my @BINS = qw(dynarray);
 my @OBJS = glob("*.o");
 my @BADS = (@BINS, @OBJS);
 my $unclean = 0;
