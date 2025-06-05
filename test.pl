@@ -6,7 +6,7 @@ use POSIX ":sys_wait_h";
 use Time::HiRes qw(time);
 use Test::Simple tests => 2;
 
-my @BINS = qw(dynarray);
+my @BINS = qw(all);
 my @OBJS = glob("*.o");
 my @BADS = (@BINS, @OBJS);
 my $unclean = 0;
@@ -18,7 +18,7 @@ for my $file (@BADS) {
 }
 ok(!$unclean, "no binaries");
 
-system("(make all) > /dev/null");
+system("(make 2>&1) > /dev/null");
 
 sub get_time {
     my $data = `cat time.tmp | grep ^real`;
