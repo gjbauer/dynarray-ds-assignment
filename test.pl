@@ -4,7 +4,7 @@ use warnings FATAL => 'all';
 use POSIX ":sys_wait_h";
 
 use Time::HiRes qw(time);
-use Test::Simple tests => 2;
+use Test::Simple tests => 6;
 
 my @BINS = qw(dynarray);
 my @OBJS = glob("*.o");
