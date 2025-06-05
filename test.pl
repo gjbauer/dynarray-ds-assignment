@@ -33,8 +33,8 @@ sub run_prog {
     return `cat outp.tmp`;
 }
 
-my $sys_v = run_prog("dynarray", "ab");
-ok($sys_v =~ /number of reallocs: 1/, "dynarray 2");
+my $arg_2 = run_prog("dynarray", "ab");
+ok($arg_2 =~ /number of reallocs: 1/, "dynarray 2");
 
 my $sys_v = run_prog("dynarray", "abc");
 ok($sys_v =~ /number of reallocs: 1/, "dynarray 3");
