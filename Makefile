@@ -1,5 +1,7 @@
 
-all:
+all: dynarray
+
+dynarray:
 	clang -o dynarray dynarray.c
 
 clean:
