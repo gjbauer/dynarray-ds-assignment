@@ -36,16 +36,16 @@ sub run_prog {
 my $arg_2 = run_prog("dynarray", "ab");
 ok($arg_2 =~ /number of reallocs: 1/, "dynarray 2");
 
-my $sys_v = run_prog("dynarray", "abc");
-ok($sys_v =~ /number of reallocs: 1/, "dynarray 3");
+my $arg_3 = run_prog("dynarray", "abc");
+ok($arg_3 =~ /number of reallocs: 1/, "dynarray 3");
 
-my $sys_v = run_prog("dynarray", "abcd");
-ok($sys_v =~ /number of reallocs: 2/, "dynarray 4");
+my $arg_4 = run_prog("dynarray", "abcd");
+ok($arg_4 =~ /number of reallocs: 2/, "dynarray 4");
 
-my $sys_v = run_prog("dynarray", "abcdefghijklmnop");
-ok($sys_v =~ /number of reallocs: 4/, "dynarray 16");
+my $arg_16 = run_prog("dynarray", "abcdefghijklmnop");
+ok($arg_16 =~ /number of reallocs: 4/, "dynarray 16");
 
-my $sys_v = run_prog("dynarray", "abcdefghijklmnopq");
-ok($sys_v =~ /number of reallocs: 4/, "dynarray 17");
+my $arg_17 = run_prog("dynarray", "abcdefghijklmnopq");
+ok($arg_17 =~ /number of reallocs: 4/, "dynarray 17");
 
 system("(make clean 2>&1) > /dev/null");
